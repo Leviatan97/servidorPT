@@ -5,6 +5,8 @@ import cors from 'cors'
 import producto_ from './rutas/productoRuta';
 import ventaRta from "./rutas/ventaRuta";
 import compraRta from "./rutas/compraRuta";
+import categoriaRta from "./rutas/categoriaRutas";
+
 
 
 class main 
@@ -28,6 +30,7 @@ class main
         this.app.use(producto_)
         this.app.use(ventaRta)
         this.app.use(compraRta)
+        this.app.use(categoriaRta)
     }
 
     public configuracionDePuertos(){

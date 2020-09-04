@@ -9,6 +9,7 @@ const cors_1 = __importDefault(require("cors"));
 const productoRuta_1 = __importDefault(require("./rutas/productoRuta"));
 const ventaRuta_1 = __importDefault(require("./rutas/ventaRuta"));
 const compraRuta_1 = __importDefault(require("./rutas/compraRuta"));
+const categoriaRutas_1 = __importDefault(require("./rutas/categoriaRutas"));
 class main {
     constructor() {
         this.app = express_1.default();
@@ -25,6 +26,7 @@ class main {
         this.app.use(productoRuta_1.default);
         this.app.use(ventaRuta_1.default);
         this.app.use(compraRuta_1.default);
+        this.app.use(categoriaRutas_1.default);
     }
     configuracionDePuertos() {
         this.app.set('port', 5000);
